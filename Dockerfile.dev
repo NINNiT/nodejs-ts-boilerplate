@@ -1,0 +1,12 @@
+FROM node:18-alpine as server
+
+# set NODE_ENV
+ENV NODE_ENV development
+
+# Set working directory
+WORKDIR /app
+
+# START COMMAND
+CMD ["npm", "run", "dev"]
+
+
