@@ -1,5 +1,5 @@
 # Build Step
-FROM node:16-alpine as builder
+FROM node:18-alpine as builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN npm ci --ignore-scripts
 RUN npm run build
 
 # Runtime Step
-FROM node:16-alpine as runtime
+FROM node:18-alpine as runtime
 
 WORKDIR /app
 
